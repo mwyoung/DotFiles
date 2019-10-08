@@ -5,6 +5,8 @@ export PYTHONUSERBASE=$HOME/.local
 export PATH=$PATH:$(pwd):$HOME/.local/bin
 export QUOTING_STYLE=literal	#changes ls so no 'name space'
 export PROMPT_COMMAND='history -a' #multiple terminals, save history
+export HISTSIZE=1000    #save more history
+HISTCONTROL=ignoredups      #ignore duplicates
 
 #alias engr="ssh -X user@host.com"
 alias cdsr="cd ~/Documents/Scripts/Scripts"
@@ -23,3 +25,7 @@ shopt -s checkwinsize
 #cd dir with name
 shopt -s autocd
 
+#other aliases
+if [ -f ~/.config/bash_hidden ]; then
+    . ~/.config/bash_hidden
+fi
