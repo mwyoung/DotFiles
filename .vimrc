@@ -74,7 +74,7 @@ noremap <PageDown> <nop>
 inoremap <PageDown> <nop>
 nnoremap <PageDown> <nop>
 
-set textwidth=90            "In comments wrap at 90 chars, use gg
+set textwidth=90            "In comments wrap at 90 chars, use gg or gqG
 set wrapmargin=2
 
 set tags=./tags;,tags;./.tags;,.tags;

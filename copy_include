@@ -10,9 +10,10 @@
 + .ssh/
 + .ssh/ssh_config
 + 2x1print.sh
++ DownloadThread.sh
 + LibreOfficePDF.sh
-+ SVGtoPNG_schematic.sh
 + hidden.sh
 + invertColorPNG.sh
 + shrinkPDF.sh
++ SVGtoPNG_schematic.sh
 - *
