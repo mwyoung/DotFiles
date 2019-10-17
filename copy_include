@@ -15,5 +15,6 @@
 + hidden.sh
 + invertColorPNG.sh
 + shrinkPDF.sh
-+ SVGtoPNG_schematic.sh
++ svg_png.sh
++ svg_crop.sh
 - *

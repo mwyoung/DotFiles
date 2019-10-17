@@ -141,7 +141,8 @@ bindsym $mod+Shift+q kill
 
 #j4 menu is faster :)
 bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
-bindsym $mod+space exec --no-startup-id synapse
+#thinkpad search key, find with xev
+bindsym XF86Search exec synapse
 
 # change focus
 bindsym $mod+Left focus left
