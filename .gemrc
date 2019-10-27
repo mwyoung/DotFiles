@@ -1,0 +1,3 @@
+install: --user-install
+gemhome: $HOME/.gem
+gempath: $HOME/.gem
