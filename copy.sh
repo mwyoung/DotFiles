@@ -7,8 +7,7 @@ gh_dotfiles="$scriptfiles/Github_Dotfiles"
 gh_scriptfiles="$gh_dotfiles/Scripts"
 
 #include backup script
-backup="rsync -avh \
-   --exclude-from=$gh_dotfiles/copy_exclude"
+backup="rsync -avh --exclude-from=$gh_dotfiles/copy_exclude"
 
 #backup dotfiles
 echo "-------------Dot files------------"
@@ -17,4 +16,3 @@ eval $backup "--recursive  --include-from=$gh_dotfiles/copy_include" $dotfiles $
 #backup scripts
 echo "-------------Scripts--------------"
 eval $backup "--include-from=$gh_dotfiles/copy_include" "$scriptfiles/" $gh_scriptfiles
-
