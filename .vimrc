@@ -19,6 +19,11 @@ set number                  "set line numbers
 set noerrorbells            "no sound on error
 set clipboard=unnamedplus,autoselect    "clipboard
 set display+=uhex           "show unprintable chars as hex number
+"clipboard support in visual mode
+vmap <leader>y "+y
+vmap <leader>p "+p
+"Stop q: shortcut menu
+map q: :q
 
 " => plugins
 call plug#begin('~/.vim/plugged')
