@@ -1,4 +1,11 @@
 #!/bin/bash
+#prevent duplicate script
+#https://www.unix.com/302415844-post6.html
+#exclude $$ (PID of self), basename $0 = this script
+if pidof -x -o $$ $(basename "$0") >/dev/null ; then
+    echo "Already running, exiting"
+    exit
+fi
 
 curbrightness=$( echo "scale=0; $( xbacklight -get )/1" | bc )
 
@@ -33,8 +40,6 @@ elif [[ "$1" == d* ]]; then
 else
     echo "bad arguments"
 fi
-
-#sleep 0.1
 
 #if [[ $curbrightness -le 0 ]]; then
 #    xbacklight -set 1

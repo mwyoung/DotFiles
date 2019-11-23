@@ -29,8 +29,9 @@ exec --no-startup-id xbacklight -set 1
 
 #Custom Keybinds
 bindsym Control+$mod+c exec google-chrome --profile-directory="Default" #stable
-bindsym Control+$mod+i exec google-chrome --incognito
+bindsym Control+$mod+i exec google-chrome --incognito --profile-directory="Default"
 bindsym Control+$mod+h exec google-chrome --profile-directory="Profile 1"
+bindsym Control+$mod+Shift+i exec google-chrome --incognito --profile-directory="Profile 1"
 bindsym Control+$mod+f exec pcmanfm-qt
 bindsym Control+$mod+s exec qps
 #bindsym Control+$mod+a exec lxterminal -e htop
