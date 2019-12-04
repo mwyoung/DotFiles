@@ -11,6 +11,7 @@
 + .ssh/
 + .ssh/ssh_config
 + 2x1print.sh
++ convert*to*.sh
 + DownloadThread.sh
 + LibreOfficePDF.sh
 + hidden.sh
