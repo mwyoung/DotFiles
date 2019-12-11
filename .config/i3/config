@@ -13,13 +13,13 @@ set $mod1 Mod1
 set $i3Term konsole
 set $i3Dir ~/.config/i3
 
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-exec --no-startup-id nm-applet
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent #for redshift
+#needed for nm-applet, else hang, also does not autostart on reload
+exec_always --no-startup-id "killall -q lxqt-notificationd; lxqt-notificationd"
+exec --no-startup-id lxqt-policykit-agent #for sudo access
+exec --no-startup-id nm-applet #networking
 exec --no-startup-id redshift-gtk
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/SunsetMountains.jpg
-exec --no-startup-id lxqt-notificationd #needed for nm-applet, else hang
-exec --no-startup-id lxqt-policykit-agent #for sudo access
-#exec_always xbacklight -set 1
 
 #Touchpad/keyboard onfig
 exec --no-startup-id $i3Dir/touchpad.sh 	#touchpad config
@@ -34,14 +34,10 @@ bindsym Control+$mod+h exec google-chrome --profile-directory="Profile 1"
 bindsym Control+$mod+Shift+i exec google-chrome --incognito --profile-directory="Profile 1"
 bindsym Control+$mod+f exec pcmanfm-qt
 bindsym Control+$mod+s exec qps
-#bindsym Control+$mod+a exec lxterminal -e htop
-#bindsym Control+$mod+r exec redshift-gtk
 bindsym Control+$mod+t exec $i3Term
 bindsym Control+$mod+x exec env MOZ_USE_XINPUT2=1 firefox
 bindsym Control+$mod+z exec env MOZ_USE_XINPUT2=1 firefox -private
 bindsym Control+$mod+w exec libreoffice --writer
-#bindsym Control+$mod+a exec pavucontrol
-#bindsym Control+$mod+z exec filezilla
 bindsym --release Shift+Print exec gnome-screenshot -a -i
 
 set $Displays External Displays: (B)oth (M)irror (D)isplayPort (V)GA (a)randr (o)ff
@@ -86,9 +82,10 @@ for_window [window_role="task_dialog"] floating enable
 #Shutdown, reboot, etc
 set $Locker i3lock --color=006221 --ignore-empty-password --show-failed-attempts && sleep 0.1
 exec --no-startup-id xss-lock --transfer-sleep-lock -- $Locker && systemctl suspend #autolock
-#change suspend time (900s = 15 min)
-exec --no-startup-id xset s 900 910
-exec --no-startup-id xset dpms 910 910 910
+#change suspend time (900s = 15 min), s = screensaver, xset q = query
+exec --no-startup-id xset s 900 930
+#dpms = disp pwr mgmt, standby, suspend, off
+exec --no-startup-id xset dpms 910 920 930
 
 #(s) suspend
 set $SystemPower (e)xit, (h)ibernate, (L,o)ck, (p)ower off, (r)eboot
