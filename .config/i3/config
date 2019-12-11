@@ -14,8 +14,8 @@ set $i3Term konsole
 set $i3Dir ~/.config/i3
 
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent #for redshift
-#needed for nm-applet, else hang, also does not autostart on reload
-exec_always --no-startup-id "killall -q lxqt-notificationd; lxqt-notificationd"
+exec_always --no-startup-id pkill -f -o lxqt-notificationd #kill last process, for reload
+exec_always --no-startup-id lxqt-notificationd #need for nm-applet, else hang
 exec --no-startup-id lxqt-policykit-agent #for sudo access
 exec --no-startup-id nm-applet #networking
 exec --no-startup-id redshift-gtk
