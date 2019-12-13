@@ -19,7 +19,7 @@ exec_always --no-startup-id lxqt-notificationd #need for nm-applet, else hang
 exec --no-startup-id lxqt-policykit-agent #for sudo access
 exec --no-startup-id nm-applet #networking
 exec --no-startup-id redshift-gtk
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/SunsetMountains.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/CurrentWallpaper.jpg
 
 #Touchpad/keyboard onfig
 exec --no-startup-id $i3Dir/touchpad.sh 	#touchpad config
