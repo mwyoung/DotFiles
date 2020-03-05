@@ -11,11 +11,11 @@
 + .ssh/
 + .ssh/ssh_config
 + 2x1print.sh
++ clean.sh
 + convert*to*.sh
 + deskew.sh
 + DownloadThread.sh
 + LibreOfficePDF.sh
-+ hidden.sh
 + invertColorPNG.sh
 + shrinkPDF.sh
 + svg_png.sh
