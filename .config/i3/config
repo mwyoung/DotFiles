@@ -58,7 +58,7 @@ bindsym $mod+p mode "$Displays"
 bindsym Control+$mod+F12 exec --no-startup-id xinput enable 10
 bindsym Control+$mod+Shift+F12 exec --no-startup-id xinput disable 10
 
-#Pulse Audio controls
+#Pulse Audio controls - find with 'xmodmap -pk | grep -i XF86'
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle #mute sound
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1% #dec volume
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
