@@ -9,7 +9,7 @@ HISTCONTROL=ignoredups              #ignore duplicates
 
 #alias svr="ssh -X user@host.com"
 alias python='python3'      #default to python3
-alias cdsr="cd ~/Documents/Scripts/Scripts"
+alias cdsr="cd ~/Documents/Scripts"
 alias cdi3="cd ~/.config/i3/"
 alias weather="cd ~/Documents/Arduino/Weather"
 alias atmega="cd $(ls -td ~/Documents/Projects/Atmega328/*/ | head -1)"

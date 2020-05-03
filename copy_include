@@ -13,6 +13,7 @@
 + 2x1print.sh
 + clean.sh
 + convert*to*.sh
++ convert*To*.sh
 + deskew.sh
 + DownloadThread.sh
 + LibreOfficePDF.sh

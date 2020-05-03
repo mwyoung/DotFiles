@@ -2,7 +2,7 @@
 #backup t-time r-recursive h-human readable l-links (no-links for no soft links) v-verbose
 #--modify-window reduce accuracy --progress shows file transfer n=dry run
 dotfiles="$HOME/"
-scriptfiles="$HOME/Documents/Scripts/Scripts"
+scriptfiles="$HOME/Documents/Scripts"
 gh_dotfiles="$scriptfiles/Github_Dotfiles"
 gh_scriptfiles="$gh_dotfiles/Scripts"
 

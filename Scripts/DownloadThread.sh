@@ -2,7 +2,7 @@
 # For downloading webpages, also has option (passwordneeded) to save cookies
 #Source: https://stackoverflow.com/questions/52269829/sharepoint-authentication-with-puppeteer-and-node-js/52576048#52576048
 browser=google-chrome
-data_dir=temp_dir
+data_dir=temp_Chrome_dir
 passwordneeded=1
 
 if [[ "$#" -eq 2 ]]; then
@@ -36,7 +36,7 @@ for (( i = 1 ; i <= "$pages" ; i++ )); do
 done
 
 if [[ -f "$pages.pdf" ]]; then
-    pdfunite $(ls -v *.pdf) output.pdf
+    pdfunite $(ls -R | grep "^[0-9]\+\.pdf$") output.pdf
     echo "pdfs combined"
 else
     echo "no pdfs..."
